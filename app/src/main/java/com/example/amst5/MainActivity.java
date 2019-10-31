@@ -2,9 +2,11 @@ package com.example.amst5;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toolbar;
 
 import com.getbase.floatingactionbutton.FloatingActionButton;
@@ -21,6 +23,14 @@ public class MainActivity extends AppCompatActivity {
         FloatingActionButton fab2 = findViewById(R.id.calendario);
         FloatingActionButton fab3 = findViewById(R.id.mapa);
         FloatingActionButton fab4 = findViewById(R.id.grafico);
+
+        fab3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent toGoogleMaps = new Intent(MainActivity.this, MapsActivity.class);
+                startActivity(toGoogleMaps);
+            }
+        });
 
     }
 
