@@ -40,6 +40,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        fab4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent toGraph = new Intent(MainActivity.this, GraphViewActivity.class);
+                startActivity(toGraph);
+            }
+        });
+
     }
 
     @Override

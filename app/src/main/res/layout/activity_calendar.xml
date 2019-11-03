@@ -21,8 +21,8 @@
     <!-- Add CalenderView to display the Calender -->
     <CalendarView
         android:id="@+id/calender"
-        android:layout_marginTop="80dp"
-        android:layout_marginLeft="28dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
     </CalendarView>
