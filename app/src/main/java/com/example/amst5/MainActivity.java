@@ -32,6 +32,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        fab2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent toCalendar = new Intent(MainActivity.this, CalendarActivity.class);
+                startActivity(toCalendar);
+            }
+        });
+
     }
 
     @Override
