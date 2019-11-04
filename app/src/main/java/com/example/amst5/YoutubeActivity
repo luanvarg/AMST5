@@ -1,0 +1,31 @@
+package com.example.amst5;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.net.Uri;
+import android.os.Bundle;
+import android.provider.MediaStore;
+import android.widget.MediaController;
+import android.widget.VideoView;
+
+public class YoutubeActivity extends AppCompatActivity {
+    VideoView videoView;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        videoView= findViewById(R.id.video_view);
+
+        MediaController mediaController= new MediaController(this);
+        mediaController.setAnchorView(videoView);
+
+
+        Uri uri= Uri.parse("https://www.youtube.com/watch?v=OqmSzXDrJBk");
+
+        videoView.setMediaController(mediaController);
+        videoView.setVideoURI(uri);
+
+        videoView.start();
+    }
+}
