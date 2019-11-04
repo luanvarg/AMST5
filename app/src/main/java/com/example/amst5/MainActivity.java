@@ -31,6 +31,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(toGoogleMaps);
             }
         });
+        
+        fab1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent toYoutube = new Intent(MainActivity.this, YoutubeActivity.class);
+                startActivity(toYoutube);
+            }
+        });
 
         fab2.setOnClickListener(new View.OnClickListener() {
             @Override
